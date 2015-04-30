@@ -68,8 +68,8 @@ class CatalogService implements ICatalogService {
 
 	private function buildMockMedias() {
 		$result = new ArrayCollection();
-		$result->add(new MediaDTO(MediaTypeEnum::IMAGE(), TagTypeEnum::INTERIOR(), "http://www.chevrolet.com.ec/content/dam/Chevrolet/lat-am/Ecuador/nscwebsite/es/Home/Cars/Sail%20Sedan/model-overview/01_images/2013-chevrolet-sail-sedan-interior-prestaciones-980x476.jpg"));
-		$result->add(new MediaDTO(MediaTypeEnum::IMAGE(), TagTypeEnum::EXTERIOR(), "http://www.blogcdn.com/es.autoblog.com/media/2011/04/2011algeriesail4p.jpg"));
+		$result->add(new MediaDTO(MediaTypeEnum::IMAGE()->getName(), TagTypeEnum::INTERIOR()->getName(), "http://www.chevrolet.com.ec/content/dam/Chevrolet/lat-am/Ecuador/nscwebsite/es/Home/Cars/Sail%20Sedan/model-overview/01_images/2013-chevrolet-sail-sedan-interior-prestaciones-980x476.jpg"));
+		$result->add(new MediaDTO(MediaTypeEnum::IMAGE()->getName(), TagTypeEnum::EXTERIOR()->getName(), "http://www.blogcdn.com/es.autoblog.com/media/2011/04/2011algeriesail4p.jpg"));
 		return $result;
 	}
 
