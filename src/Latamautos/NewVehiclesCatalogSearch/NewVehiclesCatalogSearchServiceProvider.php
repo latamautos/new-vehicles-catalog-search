@@ -19,6 +19,7 @@ class NewVehiclesCatalogSearchServiceProvider extends ServiceProvider {
 	public function register()
 	{
 		$this->app->bind('Latamautos\NewVehiclesCatalogSearch\application\contract\ITestService', 'Latamautos\NewVehiclesCatalogSearch\application\object\TestService');
+		$this->app->bind('Latamautos\NewVehiclesCatalogSearch\application\contract\ICatalogService', 'Latamautos\NewVehiclesCatalogSearch\application\object\CatalogService');
 	}
 
 	/**
