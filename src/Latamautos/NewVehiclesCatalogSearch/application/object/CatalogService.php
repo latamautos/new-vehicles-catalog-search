@@ -83,11 +83,11 @@ class CatalogService implements ICatalogService {
 
 	private function buildMockAttribute() {
 		$result = new ArrayCollection();
-		$result->add(new AttributeDTO("Alimentacion", new ArrayCollection("Inyección Directa")));
-		$result->add(new AttributeDTO("Cilindros", new ArrayCollection("4")));
-		$result->add(new AttributeDTO("Motor", new ArrayCollection("1600 cm3")));
-		$result->add(new AttributeDTO("Potencia", new ArrayCollection("163cv")));
-		$result->add(new AttributeDTO("Válvulas", new ArrayCollection("16")));
+		$result->add(new AttributeDTO("Alimentacion", new ArrayCollection(["Inyección Directa"])));
+		$result->add(new AttributeDTO("Cilindros", new ArrayCollection(["4"])));
+		$result->add(new AttributeDTO("Motor", new ArrayCollection(["1600 cm3"])));
+		$result->add(new AttributeDTO("Potencia", new ArrayCollection(["163cv"])));
+		$result->add(new AttributeDTO("Válvulas", new ArrayCollection(["16"])));
 		return $result;
 	}
 }
