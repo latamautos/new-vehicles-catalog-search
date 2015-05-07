@@ -9,9 +9,6 @@
 namespace Latamautos\NewVehiclesCatalogSearch\application\contract;
 
 
-interface ICatalogService {
+interface ITagService extends IBaseCatalogService {
 
-	function save($catalog);
-
-	function findTagByName($argument);
-} 
+}
