@@ -9,10 +9,10 @@
 namespace Latamautos\NewVehiclesCatalogSearch\application\object;
 
 use Doctrine\Common\Collections\ArrayCollection;
-use Latamautos\NewVehiclesCatalogSearch\application\contract\ICatalogService1;
+use Latamautos\NewVehiclesCatalogSearch\application\contract\ICatalogService;
 use Latamautos\NewVehiclesCatalogSearch\application\dto\CatalogDTO;
 
-class CatalogService11 implements ICatalogService1 {
+class CatalogService11 implements ICatalogService {
 
 	function save($catalog) {
 		return $this->generateMockSave();

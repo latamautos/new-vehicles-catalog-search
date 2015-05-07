@@ -9,7 +9,7 @@
 namespace Latamautos\NewVehiclesCatalogSearch\application\contract;
 
 
-interface ICatalogService1 {
+interface ICatalogService {
 
 	function save($catalog);
 
