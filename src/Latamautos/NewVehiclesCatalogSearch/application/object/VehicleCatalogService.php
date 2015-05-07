@@ -9,7 +9,7 @@
 namespace Latamautos\NewVehiclesCatalogSearch\application\object;
 
 use Doctrine\Common\Collections\ArrayCollection;
-use Latamautos\NewVehiclesCatalogSearch\application\contract\ICatalogService;
+use Latamautos\NewVehiclesCatalogSearch\application\contract\IVehicleCatalogService;
 use Latamautos\NewVehiclesCatalogSearch\application\dto\AttributeDTO;
 use Latamautos\NewVehiclesCatalogSearch\application\dto\CatalogDetailDTO;
 use Latamautos\NewVehiclesCatalogSearch\application\dto\CatalogEmbeddedDTO;
@@ -21,7 +21,7 @@ use Latamautos\NewVehiclesCatalogSearch\application\dto\VersionDTO;
 use Latamautos\NewVehiclesCatalogSearch\application\enum\MediaTypeEnum;
 use Latamautos\NewVehiclesCatalogSearch\application\enum\TagTypeEnum;
 
-class CatalogService implements ICatalogService {
+class VehicleCatalogService implements IVehicleCatalogService {
 
 	function findListCatalogByParams($type, $brand, $model) {
 		return $this->buildMockCatalogList();
@@ -54,7 +54,7 @@ class CatalogService implements ICatalogService {
 
 	private function buildMockVersions() {
 		$result = new ArrayCollection();
-		$result->add(new VersionDTO(15000, "V1", 2015, $this->buildMockMetaAttributes()));
+		$result->add(new VersionDTO(1,1,15000, "V1", 2015, $this->buildMockMetaAttributes()));
 		$result->add(new CatalogEmbeddedDTO(2, "Hatchback"));
 		return $result;
 	}
@@ -83,11 +83,11 @@ class CatalogService implements ICatalogService {
 
 	private function buildMockAttribute() {
 		$result = new ArrayCollection();
-		$result->add(new AttributeDTO("Alimentacion", new ArrayCollection(["Inyección Directa"])));
-		$result->add(new AttributeDTO("Cilindros", new ArrayCollection(["4"])));
-		$result->add(new AttributeDTO("Motor", new ArrayCollection(["1600 cm3"])));
-		$result->add(new AttributeDTO("Potencia", new ArrayCollection(["163cv"])));
-		$result->add(new AttributeDTO("Válvulas", new ArrayCollection(["16"])));
+		$result->add(new AttributeDTO(1,"Alimentacion", new ArrayCollection(["Inyección Directa"])));
+		$result->add(new AttributeDTO(2,"Cilindros", new ArrayCollection(["4"])));
+		$result->add(new AttributeDTO(3,"Motor", new ArrayCollection(["1600 cm3"])));
+		$result->add(new AttributeDTO(4,"Potencia", new ArrayCollection(["163cv"])));
+		$result->add(new AttributeDTO(5,"Válvulas", new ArrayCollection(["16"])));
 		return $result;
 	}
 }

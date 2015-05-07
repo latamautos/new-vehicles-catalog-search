@@ -9,9 +9,9 @@
 namespace Latamautos\NewVehiclesCatalogSearch\application\contract;
 
 
-interface ICatalogService {
+interface IVersionService {
 
-	function findListCatalogByParams($type,$brand,$model) ;
+	function save($version);
 
-	function findCatalogDetailById($id);
+	function getEmptyVersion($typeId);
 } 

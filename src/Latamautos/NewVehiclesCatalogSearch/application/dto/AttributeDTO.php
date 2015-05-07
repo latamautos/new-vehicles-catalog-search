@@ -1,6 +1,7 @@
 <?php
 
 namespace Latamautos\NewVehiclesCatalogSearch\application\dto;
+
 use Doctrine\Common\Collections\ArrayCollection;
 
 /**
@@ -11,11 +12,13 @@ use Doctrine\Common\Collections\ArrayCollection;
  */
 class AttributeDTO {
 
-	private $name;
+	private $id;
+	private $catalog;
 	private $value;
 
-	function __construct($name,ArrayCollection $value) {
-		$this->name = $name;
+	function __construct($id,CatalogDTO $catalog, ArrayCollection $value) {
+		$this->id = $id;
+		$this->catalog = $catalog;
 		$this->value = $value;
 	}
 }

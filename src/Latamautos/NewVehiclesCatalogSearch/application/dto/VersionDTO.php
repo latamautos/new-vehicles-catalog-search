@@ -1,6 +1,7 @@
 <?php
 
 namespace Latamautos\NewVehiclesCatalogSearch\application\dto;
+
 use Doctrine\Common\Collections\ArrayCollection;
 
 /**
@@ -11,12 +12,16 @@ use Doctrine\Common\Collections\ArrayCollection;
  */
 class VersionDTO {
 
+	private $typeId;
+	private $modelId;
 	private $price;
 	private $name;
 	private $year;
 	private $metaAttributes;
 
-	function __construct($price, $name, $year,ArrayCollection $metaAttributes) {
+	function __construct($typeId, $modelId, $price, $name, $year, ArrayCollection $metaAttributes) {
+		$this->typeId = $typeId;
+		$this->modelId = $modelId;
 		$this->price = $price;
 		$this->name = $name;
 		$this->year = $year;
