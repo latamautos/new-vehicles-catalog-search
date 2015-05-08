@@ -1,21 +1,29 @@
 {
-    "name": "latamautos/new-vehicles-catalog-search",
-    "description": "",
-    "authors": [
-        {
-            "name": "Latamautos",
-            "email": "info@latamautos.com"
-        }
-    ],
-    "require": {
-        "php": ">=5.3.0",
-        "illuminate/support": "4.1.*",
-        "doctrine/collections": "~1.1"
-    },
-    "autoload": {
-        "psr-0": {
-            "Latamautos\\NewVehiclesCatalogSearch": "src/"
-        }
-    },
-    "minimum-stability": "stable"
+	"name": "latamautos/new-vehicles-catalog-search",
+	"description": "",
+	"authors": [
+		{
+			"name": "Latamautos",
+			"email": "info@latamautos.com"
+		}
+	],
+	"require": {
+		"php": ">=5.3.0",
+		"illuminate/support": "4.1.*",
+		"doctrine/collections": "~1.1",
+		"latamautos/microservice-gateway":"*"
+
+	},
+	"autoload": {
+		"psr-0": {
+			"Latamautos\\NewVehiclesCatalogSearch": "src/"
+		}
+	},
+	"minimum-stability": "dev",
+	"repositories": [
+		{
+			"type": "git",
+			"url": "git@github.com:latamautos/microservice-gateway.git"
+		}
+	]
 }

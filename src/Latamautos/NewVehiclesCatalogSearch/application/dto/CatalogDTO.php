@@ -7,12 +7,20 @@
  */
 
 namespace Latamautos\NewVehiclesCatalogSearch\application\dto;
-
+use JMS\Serializer\Annotation\Type;
 
 class CatalogDTO {
-
+	/**
+	 * @Type("long")
+	 */
 	private $id;
+	/**
+	 * @Type("string")
+	 */
 	private $name;
+	/**
+	 * @Type("string")
+	 */
 	private $type;
 
 	function __construct($id, $name, $type) {
@@ -22,21 +30,21 @@ class CatalogDTO {
 	}
 
 	/**
-	 * @return mixed
+	 * @return string
 	 */
 	public function getName() {
 		return $this->name;
 	}
 
 	/**
-	 * @return mixed
+	 * @return string
 	 */
 	public function getType() {
 		return $this->type;
 	}
 
 	/**
-	 * @return mixed
+	 * @return int
 	 */
 	public function getId() {
 		return $this->id;
