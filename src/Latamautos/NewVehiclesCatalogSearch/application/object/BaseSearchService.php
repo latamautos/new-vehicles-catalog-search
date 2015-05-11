@@ -15,6 +15,6 @@ class BaseSearchService extends RemoteService{
 
 	function __construct() {
 		parent::__construct();
-		$this->setDomain(Config::get('NewVehiclesCatalogSearch.domain'));
+		$this->setDomain(\Config::get('NewVehiclesCatalogSearch.domain'));
 	}
 } 
