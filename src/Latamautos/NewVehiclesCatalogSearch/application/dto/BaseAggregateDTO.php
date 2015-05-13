@@ -8,8 +8,13 @@
 
 namespace Latamautos\NewVehiclesCatalogSearch\application\dto;
 
+use JMS\Serializer\Annotation\Type;
 
 class BaseAggregateDTO {
+
+	/**
+	 * @Type("integer")
+	 */
 	private $id;
 
 	/**
@@ -25,7 +30,4 @@ class BaseAggregateDTO {
 	public function getId() {
 		return $this->id;
 	}
-
-
-
-} 
+}
