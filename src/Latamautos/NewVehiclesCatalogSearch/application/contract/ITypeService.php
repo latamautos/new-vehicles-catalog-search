@@ -9,6 +9,9 @@
 namespace Latamautos\NewVehiclesCatalogSearch\application\contract;
 
 
-interface ITypeService extends IBaseCatalogService {
+use Latamautos\MicroserviceGateway\core\IResource;
+
+interface ITypeService extends IResource {
+
 
 }

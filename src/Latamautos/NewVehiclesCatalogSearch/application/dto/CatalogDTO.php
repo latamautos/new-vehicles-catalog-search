@@ -7,9 +7,11 @@
  */
 
 namespace Latamautos\NewVehiclesCatalogSearch\application\dto;
+
 use JMS\Serializer\Annotation\Type;
 
 class CatalogDTO {
+
 	/**
 	 * @Type("integer")
 	 */
@@ -22,11 +24,20 @@ class CatalogDTO {
 	 * @Type("string")
 	 */
 	private $type;
+	/**
+	 * @Type("string")
+	 */
+	private $site;
+	/**
+	 * @Type("string")
+	 */
+	private $status;
+	/**
+	 * @Type("integer")
+	 */
+	private $catalogParentId;
 
-	function __construct($id, $name, $type) {
-		$this->id = $id;
-		$this->name = $name;
-		$this->type = $type;
+	function __construct() {
 	}
 
 	/**
@@ -48,5 +59,47 @@ class CatalogDTO {
 	 */
 	public function getId() {
 		return $this->id;
+	}
+
+	/**
+	 * @return mixed
+	 */
+	public function getSite() {
+		return $this->site;
+	}
+
+	/**
+	 * @param mixed $site
+	 */
+	public function setSite($site) {
+		$this->site = $site;
+	}
+
+	/**
+	 * @return mixed
+	 */
+	public function getStatus() {
+		return $this->status;
+	}
+
+	/**
+	 * @param mixed $status
+	 */
+	public function setStatus($status) {
+		$this->status = $status;
+	}
+
+	/**
+	 * @return mixed
+	 */
+	public function getCatalogParentId() {
+		return $this->catalogParentId;
+	}
+
+	/**
+	 * @param mixed $catalogParentId
+	 */
+	public function setCatalogParentId($catalogParentId) {
+		$this->catalogParentId = $catalogParentId;
 	}
 }
