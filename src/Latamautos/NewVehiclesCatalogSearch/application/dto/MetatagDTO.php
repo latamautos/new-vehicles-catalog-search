@@ -18,7 +18,7 @@ class MetaTagDTO {
 	 */
 	private $name;
 	/**
-	 * @Type("ArrayCollection<CatalogDTO>")
+	 * @Type("ArrayCollection<Latamautos\NewVehiclesCatalogSearch\application\dto\CatalogDTO>")
 	 */
 	private $tags;
 

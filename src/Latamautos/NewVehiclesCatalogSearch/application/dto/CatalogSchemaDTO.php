@@ -14,12 +14,13 @@ use JMS\Serializer\Annotation\Type;
 
 class CatalogSchemaDTO extends BaseAggregateDTO {
 
+
 	/**
-	 * @Type("long")
+	 * @Type("integer")
 	 */
 	private $typeId;
 	/**
-	 * @Type("ArrayCollection<MetaTagDTO>")
+	 * @Type("ArrayCollection<Latamautos\NewVehiclesCatalogSearch\application\dto\MetaTagDTO>")
 	 */
 	private $metaTags;
 

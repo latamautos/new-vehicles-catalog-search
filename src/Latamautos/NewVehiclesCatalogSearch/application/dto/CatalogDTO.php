@@ -11,7 +11,7 @@ use JMS\Serializer\Annotation\Type;
 
 class CatalogDTO {
 	/**
-	 * @Type("long")
+	 * @Type("integer")
 	 */
 	private $id;
 	/**
