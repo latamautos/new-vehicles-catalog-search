@@ -24,6 +24,7 @@ class NewVehiclesCatalogSearchServiceProvider extends ServiceProvider {
 		$this->app->bind('Latamautos\NewVehiclesCatalogSearch\application\contract\ISiteService', 'Latamautos\NewVehiclesCatalogSearch\application\object\SiteService');
 		$this->app->bind('Latamautos\NewVehiclesCatalogSearch\application\contract\ICatalogSchemaService', 'Latamautos\NewVehiclesCatalogSearch\application\object\CatalogSchemaService');
 		$this->app->bind('Latamautos\NewVehiclesCatalogSearch\application\contract\ITypeService', 'Latamautos\NewVehiclesCatalogSearch\application\object\TypeService');
+		$this->app->bind('Latamautos\NewVehiclesCatalogSearch\application\contract\IBrandService', 'Latamautos\NewVehiclesCatalogSearch\application\object\BrandService');
 	}
 
 	/**
