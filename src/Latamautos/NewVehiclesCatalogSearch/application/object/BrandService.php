@@ -16,6 +16,6 @@ class BrandService extends BaseSearchService implements IBrandService {
 	function __construct() {
 		parent::__construct();
 		$this->setDto(new CatalogDTO());
-		$this->setUri("new-vehicles-catalog/v1/catalogs/brand");
+		$this->setUri("new-vehicles-catalog/v1/catalogs/brands");
 	}
 }
