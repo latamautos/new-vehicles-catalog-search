@@ -102,4 +102,11 @@ class CatalogDTO {
 	public function setCatalogParentId($catalogParentId) {
 		$this->catalogParentId = $catalogParentId;
 	}
+
+	/**
+	 * @param mixed $name
+	 */
+	public function setName($name) {
+		$this->name = $name;
+	}
 }
