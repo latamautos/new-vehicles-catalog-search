@@ -17,7 +17,7 @@ class CatalogSchemaService extends BaseSearchService implements ICatalogSchemaSe
 	function __construct() {
 		parent::__construct();
 		$this->setDto(new CatalogSchemaDTO());
-		$this->setUri("ptx/test-microservice-gateway");
+		$this->setUri("new-vehicles-catalog/v1/types/{typeId}/catalog-schema");
 	}
 
 } 
