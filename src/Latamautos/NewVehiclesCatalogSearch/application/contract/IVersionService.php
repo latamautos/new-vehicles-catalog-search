@@ -8,10 +8,8 @@
 
 namespace Latamautos\NewVehiclesCatalogSearch\application\contract;
 
+use Latamautos\MicroserviceGateway\core\IResource;
 
-interface IVersionService {
+interface IVersionService extends IResource {
 
-	function save($version);
-
-	function getEmptyVersion($typeId);
-} 
+}
