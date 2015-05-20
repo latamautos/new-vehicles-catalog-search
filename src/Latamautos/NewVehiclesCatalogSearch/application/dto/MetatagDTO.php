@@ -8,8 +8,7 @@
 
 namespace Latamautos\NewVehiclesCatalogSearch\application\dto;
 
-
-use Doctrine\Common\Collections\ArrayCollection;
+use Latamautos\MicroserviceGateway\core\ArrayCollection;
 use JMS\Serializer\Annotation\Type;
 
 class MetaTagDTO {

@@ -14,7 +14,7 @@ use Latamautos\MicroserviceGateway\core\RestPagination;
 use Latamautos\NewVehiclesCatalogSearch\application\contract\ITypeService;
 use Latamautos\NewVehiclesCatalogSearch\application\dto\CatalogDTO;
 
-class TypeService extends RemoteService implements ITypeService {
+class TypeService extends BaseSearchService implements ITypeService {
 
 	function __construct() {
 		parent::__construct();
