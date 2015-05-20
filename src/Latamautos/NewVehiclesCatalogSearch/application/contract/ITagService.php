@@ -9,6 +9,8 @@
 namespace Latamautos\NewVehiclesCatalogSearch\application\contract;
 
 
-interface ITagService extends IBaseCatalogService {
+use Latamautos\MicroserviceGateway\core\IResource;
+
+interface ITagService extends IResource {
 
 }

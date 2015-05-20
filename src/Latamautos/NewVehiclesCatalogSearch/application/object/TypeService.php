@@ -19,6 +19,6 @@ class TypeService extends BaseSearchService implements ITypeService {
 	function __construct() {
 		parent::__construct();
 		$this->setDto(new CatalogDTO());
-		$this->setUri("new-vehicles-catalog/v1/catalogs/type");
+		$this->setUri("new-vehicles-catalog/v1/catalogs/types");
 	}
 }

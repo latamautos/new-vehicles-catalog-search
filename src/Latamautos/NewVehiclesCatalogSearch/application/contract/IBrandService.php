@@ -9,6 +9,8 @@
 namespace Latamautos\NewVehiclesCatalogSearch\application\contract;
 
 
-interface IBrandService extends IBaseCatalogService {
+use Latamautos\MicroserviceGateway\core\IResource;
+
+interface IBrandService extends IResource {
 
 }
