@@ -20,11 +20,11 @@ class VersionDTO {
 	/**
 	 * @Type("integer")
 	 */
-	private $typeId;
+	private $modelDetailId;
 	/**
 	 * @Type("integer")
 	 */
-	private $modelId;
+	private $subtypeId;
 	/**
 	 * @Type("integer")
 	 */
@@ -43,7 +43,6 @@ class VersionDTO {
 	private $metaAttributes;
 
 	function __construct() {
-
 	}
 
 	/**
@@ -58,34 +57,6 @@ class VersionDTO {
 	 */
 	public function setId($id) {
 		$this->id = $id;
-	}
-
-	/**
-	 * @return mixed
-	 */
-	public function getTypeId() {
-		return $this->typeId;
-	}
-
-	/**
-	 * @param mixed $typeId
-	 */
-	public function setTypeId($typeId) {
-		$this->typeId = $typeId;
-	}
-
-	/**
-	 * @return mixed
-	 */
-	public function getModelId() {
-		return $this->modelId;
-	}
-
-	/**
-	 * @param mixed $modelId
-	 */
-	public function setModelId($modelId) {
-		$this->modelId = $modelId;
 	}
 
 	/**
@@ -144,5 +115,31 @@ class VersionDTO {
 		$this->metaAttributes = $metaAttributes;
 	}
 
+	/**
+	 * @return mixed
+	 */
+	public function getModelDetailId() {
+		return $this->modelDetailId;
+	}
 
+	/**
+	 * @param mixed $modelDetailId
+	 */
+	public function setModelDetailId($modelDetailId) {
+		$this->modelDetailId = $modelDetailId;
+	}
+
+	/**
+	 * @return mixed
+	 */
+	public function getSubtypeId() {
+		return $this->subtypeId;
+	}
+
+	/**
+	 * @param mixed $subtypeId
+	 */
+	public function setSubtypeId($subtypeId) {
+		$this->subtypeId = $subtypeId;
+	}
 }
