@@ -16,15 +16,15 @@ class AttributeDTO {
 	/**
 	 * @Type("integer")
 	 */
-	private $id;
+	public $id;
 	/**
 	 * @Type("Latamautos\NewVehiclesCatalogSearch\application\dto\CatalogEmbeddedDTO")
 	 */
-	private $catalog;
+	public $catalog;
 	/**
-	 * @Type("ArrayCollection<>")
+	 * @Type("ArrayCollection<string>")
 	 */
-	private $values;
+	public $values;
 
 	/**
 	 * @return mixed

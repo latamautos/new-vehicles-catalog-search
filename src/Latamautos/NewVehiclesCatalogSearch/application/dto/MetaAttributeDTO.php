@@ -1,7 +1,7 @@
 <?php
 namespace Latamautos\NewVehiclesCatalogSearch\application\dto;
 
-use Doctrine\Common\Collections\ArrayCollection;
+use Latamautos\MicroserviceGateway\core\ArrayCollection;
 use JMS\Serializer\Annotation\Type;
 
 /**
@@ -15,11 +15,11 @@ class MetaAttributeDTO {
 	/**
 	 * @Type("string")
 	 */
-	private $name;
+	public $name;
 	/**
 	 * @Type("ArrayCollection<Latamautos\NewVehiclesCatalogSearch\application\dto\AttributeDTO>")
 	 */
-	private $attributes;
+	public $attributes;
 
 	function __construct() {
 	}

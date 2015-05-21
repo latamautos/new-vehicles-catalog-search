@@ -2,7 +2,7 @@
 
 namespace Latamautos\NewVehiclesCatalogSearch\application\dto;
 
-use Doctrine\Common\Collections\ArrayCollection;
+use Latamautos\MicroserviceGateway\core\ArrayCollection;
 use JMS\Serializer\Annotation\Type;
 
 /**
@@ -16,31 +16,31 @@ class VersionDTO {
 	/**
 	 * @Type("integer")
 	 */
-	private $id;
+	public $id;
 	/**
 	 * @Type("integer")
 	 */
-	private $modelDetailId;
+	public $modelDetailId;
 	/**
 	 * @Type("integer")
 	 */
-	private $subtypeId;
+	public $subtypeId;
 	/**
 	 * @Type("integer")
 	 */
-	private $price;
+	public $price;
 	/**
 	 * @Type("string")
 	 */
-	private $name;
+	public $name;
 	/**
 	 * @Type("integer")
 	 */
-	private $year;
+	public $year;
 	/**
 	 * @Type("ArrayCollection<Latamautos\NewVehiclesCatalogSearch\application\dto\MetaAttributeDTO>")
 	 */
-	private $metaAttributes;
+	public $metaAttributes;
 
 	function __construct() {
 	}
