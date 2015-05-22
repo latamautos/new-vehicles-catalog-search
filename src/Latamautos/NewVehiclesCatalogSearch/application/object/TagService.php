@@ -11,7 +11,7 @@ namespace Latamautos\NewVehiclesCatalogSearch\application\object;
 use Latamautos\NewVehiclesCatalogSearch\application\contract\ITagService;
 use Latamautos\NewVehiclesCatalogSearch\application\dto\CatalogDTO;
 
-class TagService extends BaseSearchService implements ITagService {
+class TagService extends BaseNewVehicleCatalogService implements ITagService {
 
 	function __construct() {
 		parent::__construct();

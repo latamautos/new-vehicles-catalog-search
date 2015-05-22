@@ -12,7 +12,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Latamautos\NewVehiclesCatalogSearch\application\contract\IModelService;
 use Latamautos\NewVehiclesCatalogSearch\application\dto\CatalogDTO;
 
-class ModelService extends BaseSearchService implements IModelService {
+class ModelService extends BaseNewVehicleCatalogService implements IModelService {
 
 	function __construct() {
 		parent::__construct();
