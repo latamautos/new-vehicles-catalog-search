@@ -23,6 +23,11 @@ class LeadDTO {
      */
     private $productType;
 
+    /**
+     * @Type("integer")
+     */
+    private $locationCode;
+
 
     /**
      * @Type("ArrayCollection<integer>")
@@ -78,6 +83,22 @@ class LeadDTO {
     public function setProductType($productType)
     {
         $this->productType = $productType;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getLocationCode()
+    {
+        return $this->locationCode;
+    }
+
+    /**
+     * @param mixed $locationCode
+     */
+    public function setLocationCode($locationCode)
+    {
+        $this->locationCode = $locationCode;
     }
 
 }
