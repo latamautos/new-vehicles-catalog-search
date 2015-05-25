@@ -11,7 +11,7 @@ namespace Latamautos\NewVehiclesCatalogSearch\application\object;
 use Latamautos\NewVehiclesCatalogSearch\application\contract\IBrandService;
 use Latamautos\NewVehiclesCatalogSearch\application\dto\CatalogDTO;
 
-class BrandService extends BaseSearchService implements IBrandService {
+class BrandService extends BaseNewVehicleCatalogService implements IBrandService {
 
 	function __construct() {
 		parent::__construct();

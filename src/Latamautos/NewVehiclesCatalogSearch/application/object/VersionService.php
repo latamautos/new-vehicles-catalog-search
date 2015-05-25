@@ -15,7 +15,7 @@ use Latamautos\NewVehiclesCatalogSearch\application\dto\CatalogDTO;
 use Latamautos\NewVehiclesCatalogSearch\application\dto\MetaAttributeDTO;
 use Latamautos\NewVehiclesCatalogSearch\application\dto\VersionDTO;
 
-class VersionService extends BaseSearchService implements IVersionService {
+class VersionService extends BaseNewVehicleCatalogService implements IVersionService {
 
 	function __construct() {
 		parent::__construct();

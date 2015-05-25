@@ -12,7 +12,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Latamautos\NewVehiclesCatalogSearch\application\contract\ISubtypeService;
 use Latamautos\NewVehiclesCatalogSearch\application\dto\CatalogDTO;
 
-class SubtypeService extends BaseSearchService implements ISubtypeService {
+class SubtypeService extends BaseNewVehicleCatalogService implements ISubtypeService {
 
 	function __construct() {
 		parent::__construct();

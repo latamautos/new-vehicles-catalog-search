@@ -11,10 +11,10 @@ namespace Latamautos\NewVehiclesCatalogSearch\application\object;
 
 use Latamautos\MicroserviceGateway\core\RemoteService;
 
-class BaseSearchService extends RemoteService{
+class BaseNewVehicleCatalogService extends RemoteService{
 
 	function __construct() {
 		parent::__construct();
-		$this->setDomain(\Config::get('NewVehiclesCatalogSearch.domain'));
+		$this->setDomain(\Config::get('LatamAutosMicroservice.domainNewVehicleCatalog'));
 	}
 } 
