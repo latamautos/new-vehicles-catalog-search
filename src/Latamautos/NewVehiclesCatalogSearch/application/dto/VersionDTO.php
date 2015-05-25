@@ -20,7 +20,7 @@ class VersionDTO {
 	/**
 	 * @Type("integer")
 	 */
-	public $modelDetailId;
+	public $modelId;
 	/**
 	 * @Type("integer")
 	 */
@@ -115,19 +115,6 @@ class VersionDTO {
 		$this->metaAttributes = $metaAttributes;
 	}
 
-	/**
-	 * @return mixed
-	 */
-	public function getModelDetailId() {
-		return $this->modelDetailId;
-	}
-
-	/**
-	 * @param mixed $modelDetailId
-	 */
-	public function setModelDetailId($modelDetailId) {
-		$this->modelDetailId = $modelDetailId;
-	}
 
 	/**
 	 * @return mixed
@@ -141,5 +128,19 @@ class VersionDTO {
 	 */
 	public function setSubtypeId($subtypeId) {
 		$this->subtypeId = $subtypeId;
+	}
+
+	/**
+	 * @return mixed
+	 */
+	public function getModelId() {
+		return $this->modelId;
+	}
+
+	/**
+	 * @param mixed $modelId
+	 */
+	public function setModelId($modelId) {
+		$this->modelId = $modelId;
 	}
 }
