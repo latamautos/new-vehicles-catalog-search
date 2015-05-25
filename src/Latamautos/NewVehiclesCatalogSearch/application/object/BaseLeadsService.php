@@ -17,4 +17,4 @@ class BaseLeadsService extends RemoteService{
 		parent::__construct();
 		$this->setDomain(\Config::get('LatamAutosMicroservice.domainLeads'));
 	}
-} 
+}
