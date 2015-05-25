@@ -14,7 +14,7 @@ class LeadDTO {
 
 
     /**
-     * @Type("ArrayCollection<Latamautos\NewVehiclesCatalogSearch\application\dto\CustomerDTO>")
+     * @Type("Latamautos\NewVehiclesCatalogSearch\application\dto\CustomerDTO")
      */
     private $customer;
 
