@@ -9,9 +9,15 @@
 namespace Latamautos\NewVehiclesCatalogSearch\application\contract;
 
 
-use Latamautos\MicroserviceGateway\core\IResource;
+interface ICatalogSchemaService {
 
-interface ICatalogSchemaService extends IResource{
+	public function setPathParams($pathParamsArray = array ());
 
+	public function setQueryParams($queryParamsArray = array ());
 
-} 
+	public function getProcessedURI($objectOrId = null);
+
+	public function store($body, array $queryString = array ());
+
+	public function index(array $queryString = array ());
+}
