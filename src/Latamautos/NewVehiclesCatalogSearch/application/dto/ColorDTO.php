@@ -1,6 +1,6 @@
 <?php
 namespace Latamautos\NewVehiclesCatalogSearch\application\dto;
-
+use JMS\Serializer\Annotation\Type;
 /**
  * Created by PhpStorm.
  * User: paul
@@ -9,8 +9,17 @@ namespace Latamautos\NewVehiclesCatalogSearch\application\dto;
  */
 class ColorDTO {
 
+    /**
+     * @Type("string")
+     */
 	private $name;
+    /**
+     * @Type("string")
+     */
 	private $value;
+    /**
+     * @Type("string")
+     */
 	private $urlImage;
 
 	function __construct($name, $value, $urlImage) {

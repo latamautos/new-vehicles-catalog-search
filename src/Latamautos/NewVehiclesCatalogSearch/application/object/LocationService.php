@@ -9,9 +9,7 @@
 namespace Latamautos\NewVehiclesCatalogSearch\application\object;
 
 
-use Latamautos\NewVehiclesCatalogSearch\application\contract\IDealerService;
 use Latamautos\NewVehiclesCatalogSearch\application\contract\ILocationService;
-use Latamautos\NewVehiclesCatalogSearch\application\dto\DealerDTO;
 use Latamautos\NewVehiclesCatalogSearch\application\dto\LocationDTO;
 
 class LocationService extends BaseAdminService implements ILocationService {

@@ -1,5 +1,6 @@
 <?php
 namespace Latamautos\NewVehiclesCatalogSearch\application\dto;
+use JMS\Serializer\Annotation\Type;
 /**
  * Created by PhpStorm.
  * User: paul
@@ -8,8 +9,17 @@ namespace Latamautos\NewVehiclesCatalogSearch\application\dto;
  */
 class MediaDTO {
 
+    /**
+     * @Type("string")
+     */
 	private $mediaType;
+    /**
+     * @Type("string")
+     */
 	private $tagType;
+    /**
+     * @Type("string")
+     */
 	private $url;
 
 	function __construct($mediaType, $tagType, $url) {
