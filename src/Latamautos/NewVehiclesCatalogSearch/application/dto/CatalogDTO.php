@@ -15,27 +15,27 @@ class CatalogDTO {
 	/**
 	 * @Type("integer")
 	 */
-	private $id;
+    public $id;
 	/**
 	 * @Type("string")
 	 */
-	private $name;
+    public $name;
 	/**
 	 * @Type("string")
 	 */
-	private $type;
+    public $type;
 	/**
 	 * @Type("string")
 	 */
-	private $site;
+    public $site;
 	/**
 	 * @Type("string")
 	 */
-	private $status;
+    public $status;
 	/**
 	 * @Type("integer")
 	 */
-	private $catalogParentId;
+    public $catalogParentId;
 
 	function __construct() {
 	}

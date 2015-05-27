@@ -1,6 +1,6 @@
 <?php
 namespace Latamautos\NewVehiclesCatalogSearch\application\dto;
-
+use JMS\Serializer\Annotation\Type;
 /**
  * Created by PhpStorm.
  * User: paul
@@ -12,19 +12,19 @@ class FiltersDTO {
     /**
      * @Type("array")
      */
-	private $types;
+	public $types;
     /**
      * @Type("array")
      */
-    private $subTypes;
+    public $subTypes;
     /**
      * @Type("array")
      */
-    private $brands;
+    public $brands;
     /**
      * @Type("array")
      */
-    private $models;
+    public $models;
 
     /**
      * @return mixed
