@@ -16,10 +16,14 @@ class CatalogDTO {
 	 * @Type("integer")
 	 */
     public $id;
-	/**
-	 * @Type("string")
-	 */
+    /**
+     * @Type("string")
+     */
     public $name;
+    /**
+     * @Type("string")
+     */
+    public $icon;
 	/**
 	 * @Type("string")
 	 */
@@ -124,5 +128,19 @@ class CatalogDTO {
 		$this->type = $type;
 	}
 
+    /**
+     * @return mixed
+     */
+    public function getIcon()
+    {
+        return $this->icon;
+    }
 
+    /**
+     * @param mixed $icon
+     */
+    public function setIcon($icon)
+    {
+        $this->icon = $icon;
+    }
 }
