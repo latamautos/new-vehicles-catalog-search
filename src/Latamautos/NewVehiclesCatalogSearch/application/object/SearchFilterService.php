@@ -8,14 +8,14 @@
 
 namespace Latamautos\NewVehiclesCatalogSearch\application\object;
 
-use Latamautos\NewVehiclesCatalogSearch\application\contract\IVehicleSearchService;
+use Latamautos\NewVehiclesCatalogSearch\application\contract\ISearchFilterService;
 use Latamautos\NewVehiclesCatalogSearch\application\dto\FiltersDTO;
 
-class VehicleSearchService extends BaseNewVehicleCatalogService implements IVehicleSearchService {
+class SearchFilterService extends BaseNewVehicleCatalogService implements ISearchFilterService {
 
 	function __construct() {
 		parent::__construct();
 		$this->setDto(new FiltersDTO());
-		$this->setUri("new-vehicles-catalog/v1/vehicleSearch/filters");
+		$this->setUri("new-vehicles-catalog/v1/modelDetailSearch/filters");
 	}
 }
