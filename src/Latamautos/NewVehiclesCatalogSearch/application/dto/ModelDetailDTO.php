@@ -40,15 +40,30 @@ class ModelDetailDTO {
 
 
     /**
-     * @Type("integer")
+     * @Type("Latamautos\NewVehiclesCatalogSearch\application\dto\CatalogDTO")
      */
-    public $brandId;
+    public $type;
 
 
     /**
      * @Type("integer")
      */
+    public $brandId;
+
+    /**
+     * @Type("Latamautos\NewVehiclesCatalogSearch\application\dto\CatalogDTO")
+     */
+    public $brand;
+
+    /**
+     * @Type("integer")
+     */
     public $modelId;
+
+    /**
+     * @Type("Latamautos\NewVehiclesCatalogSearch\application\dto\CatalogDTO")
+     */
+    public $model;
 
 
     /**
