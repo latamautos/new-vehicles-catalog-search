@@ -16,23 +16,23 @@ class LeadDTO {
     /**
      * @Type("Latamautos\NewVehiclesCatalogSearch\application\dto\CustomerDTO")
      */
-    private $customer;
+    public $customer;
 
     /**
      * @Type("string")
      */
-    private $productType;
+    public $productType;
 
     /**
      * @Type("integer")
      */
-    private $locationCode;
+    public $locationCode;
 
 
     /**
      * @Type("ArrayCollection<integer>")
      */
-    private $productIds;
+    public $productIds;
 
 	function __construct() {
 	}

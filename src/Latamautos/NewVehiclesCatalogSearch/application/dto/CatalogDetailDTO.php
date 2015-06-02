@@ -10,12 +10,12 @@ use Doctrine\Common\Collections\ArrayCollection;
  */
 class CatalogDetailDTO {
 
-	private $brand;
-	private $model;
-	private $priceFrom;
-	private $countVersion;
-	private $imageUrl;
-	private $subtypes;
+	public $brand;
+	public $model;
+	public $priceFrom;
+	public $countVersion;
+	public $imageUrl;
+	public $subtypes;
 
 	function __construct($brand, $model, $priceFrom, $countVersion, $imageUrl,ArrayCollection $subtypes) {
 		$this->brand = $brand;

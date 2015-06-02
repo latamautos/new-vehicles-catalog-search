@@ -22,52 +22,52 @@ class ModelDetailDTO {
     /**
      * @Type("string")
      */
-    private $name;
+    public $name;
 
     /**
      * @Type("string")
      */
-    private $summary;
+    public $summary;
 
     /**
      * @Type("integer")
      */
-    private $year;
-
-
-    /**
-     * @Type("integer")
-     */
-    private $idType;
+    public $year;
 
 
     /**
      * @Type("integer")
      */
-    private $idBrand;
+    public $idType;
 
 
     /**
      * @Type("integer")
      */
-    private $idModel;
+    public $idBrand;
+
+
+    /**
+     * @Type("integer")
+     */
+    public $idModel;
 
 
     /**
      * @Type("boolean")
      */
-    private $current;
+    public $current;
 
 
     /**
      * @Type("ArrayCollection<Latamautos\NewVehiclesCatalogSearch\application\dto\ColorDTO>")
      */
-    private $colors;
+    public $colors;
 
     /**
      * @Type("ArrayCollection<Latamautos\NewVehiclesCatalogSearch\application\dto\MediaDTO>")
      */
-    private $medias;
+    public $medias;
 
 
     function __construct() {

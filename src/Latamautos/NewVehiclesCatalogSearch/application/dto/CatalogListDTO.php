@@ -10,14 +10,14 @@ use Doctrine\Common\Collections\ArrayCollection;
  */
 class CatalogListDTO {
 
-	private $type;
-	private $subtype;
-	private $brand;
-	private $name;
-	private $summary;
-	private $versions;
-	private $colors;
-	private $medias;
+    public $type;
+    public $subtype;
+    public $brand;
+    public $name;
+    public $summary;
+    public $versions;
+    public $colors;
+    public $medias;
 
 	function __construct($type,ArrayCollection $subtype, $brand, $name, $summary,ArrayCollection $versions,ArrayCollection $colors,ArrayCollection $medias) {
 		$this->type = $type;

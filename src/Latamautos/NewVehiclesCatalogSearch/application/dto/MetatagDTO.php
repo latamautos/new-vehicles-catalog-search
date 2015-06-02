@@ -15,11 +15,11 @@ class MetaTagDTO {
 	/**
 	 * @Type("string")
 	 */
-	private $name;
+    public $name;
 	/**
 	 * @Type("ArrayCollection<Latamautos\NewVehiclesCatalogSearch\application\dto\CatalogDTO>")
 	 */
-	private $tags;
+    public $tags;
 
 	/**
 	 * @param string $name

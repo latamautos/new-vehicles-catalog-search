@@ -14,11 +14,11 @@ class CatalogEmbeddedDTO {
 	/**
 	 * @Type("integer")
 	 */
-	private $id;
+    public $id;
 	/**
 	 * @Type("string")
 	 */
-	private $name;
+    public $name;
 
 	function __construct() {
 	}

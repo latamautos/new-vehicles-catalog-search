@@ -12,15 +12,15 @@ class ColorDTO {
     /**
      * @Type("string")
      */
-	private $name;
+    public $name;
     /**
      * @Type("string")
      */
-	private $value;
+    public $value;
     /**
      * @Type("string")
      */
-	private $urlImage;
+    public $urlImage;
 
 	function __construct($name, $value, $urlImage) {
 		$this->name = $name;

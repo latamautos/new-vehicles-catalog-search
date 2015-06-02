@@ -18,11 +18,11 @@ class CatalogSchemaDTO extends BaseAggregateDTO {
 	/**
 	 * @Type("integer")
 	 */
-	private $typeId;
+    public $typeId;
 	/**
 	 * @Type("ArrayCollection<Latamautos\NewVehiclesCatalogSearch\application\dto\MetaTagDTO>")
 	 */
-	private $metaTags;
+    public $metaTags;
 
 	/**
 	 * @param ArrayCollection $metaTags

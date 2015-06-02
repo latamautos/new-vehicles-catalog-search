@@ -15,27 +15,27 @@ class LocationDTO {
 	/**
 	 * @Type("integer")
 	 */
-	private $id;
+    public $id;
 	/**
 	 * @Type("string")
 	 */
-	private $code;
+    public $code;
 	/**
 	 * @Type("string")
 	 */
-	private $shortName;
+    public $shortName;
 	/**
 	 * @Type("string")
 	 */
-	private $longName;
+    public $longName;
     /**
      * @Type("array")
      */
-    private $types;
+    public $types;
     /**
      * @Type("array")
      */
-    private $completeTree;
+    public $completeTree;
 
 	function __construct() {
 	}

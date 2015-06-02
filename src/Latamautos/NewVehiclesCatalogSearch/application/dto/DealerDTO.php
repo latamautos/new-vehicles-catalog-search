@@ -15,31 +15,31 @@ class DealerDTO {
 	/**
 	 * @Type("integer")
 	 */
-	private $id;
+    public $id;
 	/**
 	 * @Type("string")
 	 */
-	private $name;
+    public $name;
 	/**
 	 * @Type("string")
 	 */
-	private $address;
+    public $address;
 	/**
 	 * @Type("string")
 	 */
-	private $contact;
+    public $contact;
     /**
      * @Type("string")
      */
-    private $telephone;
+    public $telephone;
     /**
      * @Type("string")
      */
-    private $site;
+    public $site;
     /**
      * @Type("string")
      */
-    private $status;
+    public $status;
 
 	function __construct() {
 	}
