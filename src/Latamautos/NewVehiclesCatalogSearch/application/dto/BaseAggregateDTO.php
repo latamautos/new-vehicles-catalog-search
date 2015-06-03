@@ -15,7 +15,7 @@ class BaseAggregateDTO {
 	/**
 	 * @Type("integer")
 	 */
-	private $id;
+    public $id;
 
 	/**
 	 * @param mixed $id

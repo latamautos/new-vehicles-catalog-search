@@ -17,60 +17,94 @@ class ModelDetailDTO {
      */
     public $id;
 
+    /**
+     * @Type("string")
+     */
+    public $name;
+
+    /**
+     * @Type("string")
+     */
+    public $summary;
+
+    /**
+     * @Type("integer")
+     */
+    public $year;
+
+
+    /**
+     * @Type("integer")
+     */
+    public $typeId;
+
+
+    /**
+     * @Type("Latamautos\NewVehiclesCatalogSearch\application\dto\CatalogDTO")
+     */
+    public $type;
+
+
+    /**
+     * @Type("integer")
+     */
+    public $brandId;
+
+    /**
+     * @Type("Latamautos\NewVehiclesCatalogSearch\application\dto\CatalogDTO")
+     */
+    public $brand;
+
+    /**
+     * @Type("integer")
+     */
+    public $modelId;
+
+    /**
+     * @Type("Latamautos\NewVehiclesCatalogSearch\application\dto\CatalogDTO")
+     */
+    public $model;
 
 
     /**
      * @Type("string")
      */
-    private $name;
+    public $currentStatus;
 
     /**
      * @Type("string")
      */
-    private $summary;
-
-    /**
-     * @Type("integer")
-     */
-    private $year;
-
-
-    /**
-     * @Type("integer")
-     */
-    private $idType;
-
-
-    /**
-     * @Type("integer")
-     */
-    private $idBrand;
-
-
-    /**
-     * @Type("integer")
-     */
-    private $idModel;
-
-
-    /**
-     * @Type("boolean")
-     */
-    private $current;
+    public $status;
 
 
     /**
      * @Type("ArrayCollection<Latamautos\NewVehiclesCatalogSearch\application\dto\ColorDTO>")
      */
-    private $colors;
+    public $colors;
 
     /**
      * @Type("ArrayCollection<Latamautos\NewVehiclesCatalogSearch\application\dto\MediaDTO>")
      */
-    private $medias;
+    public $medias;
 
 
     function __construct() {
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param mixed $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
     }
 
     /**
@@ -124,65 +158,81 @@ class ModelDetailDTO {
     /**
      * @return mixed
      */
-    public function getIdType()
+    public function getTypeId()
     {
-        return $this->idType;
+        return $this->typeId;
     }
 
     /**
-     * @param mixed $idType
+     * @param mixed $typeId
      */
-    public function setIdType($idType)
+    public function setTypeId($typeId)
     {
-        $this->idType = $idType;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getIdBrand()
-    {
-        return $this->idBrand;
-    }
-
-    /**
-     * @param mixed $idBrand
-     */
-    public function setIdBrand($idBrand)
-    {
-        $this->idBrand = $idBrand;
+        $this->typeId = $typeId;
     }
 
     /**
      * @return mixed
      */
-    public function getIdModel()
+    public function getBrandId()
     {
-        return $this->idModel;
+        return $this->brandId;
     }
 
     /**
-     * @param mixed $idModel
+     * @param mixed $brandId
      */
-    public function setIdModel($idModel)
+    public function setBrandId($brandId)
     {
-        $this->idModel = $idModel;
+        $this->brandId = $brandId;
     }
 
     /**
      * @return mixed
      */
-    public function getCurrent()
+    public function getModelId()
     {
-        return $this->current;
+        return $this->modelId;
     }
 
     /**
-     * @param mixed $current
+     * @param mixed $modelId
      */
-    public function setCurrent($current)
+    public function setModelId($modelId)
     {
-        $this->current = $current;
+        $this->modelId = $modelId;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCurrentStatus()
+    {
+        return $this->currentStatus;
+    }
+
+    /**
+     * @param mixed $currentStatus
+     */
+    public function setCurrentStatus($currentStatus)
+    {
+        $this->currentStatus = $currentStatus;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getStatus()
+    {
+        return $this->status;
+    }
+
+    /**
+     * @param mixed $status
+     */
+    public function setStatus($status)
+    {
+        $this->status = $status;
     }
 
     /**
@@ -216,21 +266,4 @@ class ModelDetailDTO {
     {
         $this->medias = $medias;
     }
-
-    /**
-     * @return mixed
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
-
-    /**
-     * @param mixed $id
-     */
-    public function setId($id)
-    {
-        $this->id = $id;
-    }
-
 }

@@ -12,15 +12,15 @@ class MediaDTO {
     /**
      * @Type("string")
      */
-	private $mediaType;
+    public $mediaType;
     /**
      * @Type("string")
      */
-	private $tagType;
+    public $tagType;
     /**
      * @Type("string")
      */
-	private $url;
+    public $url;
 
 	function __construct($mediaType, $tagType, $url) {
 		$this->mediaType = $mediaType;

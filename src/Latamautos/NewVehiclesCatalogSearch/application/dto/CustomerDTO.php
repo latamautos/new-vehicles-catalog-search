@@ -15,19 +15,19 @@ class CustomerDTO {
 	/**
 	 * @Type("integer")
 	 */
-	private $id;
+    public $id;
 	/**
 	 * @Type("string")
 	 */
-	private $name;
+    public $name;
 	/**
 	 * @Type("string")
 	 */
-	private $email;
+    public $email;
     /**
      * @Type("string")
      */
-    private $telephone;
+    public $telephone;
 
 	function __construct() {
 	}
