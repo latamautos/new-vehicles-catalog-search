@@ -31,6 +31,14 @@ class CatalogDTO {
 	/**
 	 * @Type("string")
 	 */
+	public $logo;
+	/**
+	 * @Type("string")
+	 */
+	public $image;
+	/**
+	 * @Type("string")
+	 */
     public $site;
 	/**
 	 * @Type("string")
@@ -143,4 +151,32 @@ class CatalogDTO {
     {
         $this->icon = $icon;
     }
+
+	/**
+	 * @return mixed
+	 */
+	public function getLogo() {
+		return $this->logo;
+	}
+
+	/**
+	 * @param mixed $logo
+	 */
+	public function setLogo($logo) {
+		$this->logo = $logo;
+	}
+
+	/**
+	 * @return mixed
+	 */
+	public function getImage() {
+		return $this->image;
+	}
+
+	/**
+	 * @param mixed $image
+	 */
+	public function setImage($image) {
+		$this->image = $image;
+	}
 }
