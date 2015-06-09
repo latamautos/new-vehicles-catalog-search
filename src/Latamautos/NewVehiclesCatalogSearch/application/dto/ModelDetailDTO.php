@@ -20,11 +20,6 @@ class ModelDetailDTO {
     /**
      * @Type("string")
      */
-    public $name;
-
-    /**
-     * @Type("string")
-     */
     public $summary;
 
     /**
@@ -129,22 +124,6 @@ class ModelDetailDTO {
     public function setId($id)
     {
         $this->id = $id;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getName()
-    {
-        return $this->name;
-    }
-
-    /**
-     * @param mixed $name
-     */
-    public function setName($name)
-    {
-        $this->name = $name;
     }
 
     /**
