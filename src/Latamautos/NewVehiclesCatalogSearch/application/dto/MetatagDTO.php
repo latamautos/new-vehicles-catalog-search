@@ -9,17 +9,22 @@
 namespace Latamautos\NewVehiclesCatalogSearch\application\dto;
 
 use Latamautos\MicroserviceGateway\core\ArrayCollection;
-use JMS\Serializer\Annotation\Type;
 
 class MetaTagDTO {
+
 	/**
 	 * @Type("string")
 	 */
-    public $name;
+	public $name;
 	/**
 	 * @Type("ArrayCollection<Latamautos\NewVehiclesCatalogSearch\application\dto\CatalogDTO>")
 	 */
-    public $tags;
+	public $tags;
+
+	/**
+	 * @Type("boolean")
+	 */
+	public $showCollapsed;
 
 	/**
 	 * @param string $name
@@ -49,6 +54,17 @@ class MetaTagDTO {
 		return $this->tags;
 	}
 
+	/**
+	 * @return mixed
+	 */
+	public function getShowCollapsed() {
+		return $this->showCollapsed;
+	}
 
-
-} 
+	/**
+	 * @param mixed $showCollapsed
+	 */
+	public function setShowCollapsed($showCollapsed) {
+		$this->showCollapsed = $showCollapsed;
+	}
+}

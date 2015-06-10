@@ -24,7 +24,7 @@ class LeadDTO {
     public $productType;
 
     /**
-     * @Type("integer")
+     * @Type("string")
      */
     public $locationCode;
 

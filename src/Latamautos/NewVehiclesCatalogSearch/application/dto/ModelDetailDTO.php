@@ -23,6 +23,11 @@ class ModelDetailDTO {
     public $summary;
 
     /**
+     * @Type("string")
+     */
+    public $photo;
+
+    /**
      * @Type("integer")
      */
     public $year;
@@ -38,6 +43,16 @@ class ModelDetailDTO {
      * @Type("Latamautos\NewVehiclesCatalogSearch\application\dto\CatalogDTO")
      */
     public $type;
+
+    /**
+     * @Type("integer")
+     */
+    public $countVersion;
+
+    /**
+     * @Type("integer")
+     */
+    public $price;
 
 
     /**
@@ -82,6 +97,15 @@ class ModelDetailDTO {
      */
     public $medias;
 
+    /**
+     * @Type("ArrayCollection<Latamautos\NewVehiclesCatalogSearch\application\dto\VersionDTO>")
+     */
+    public $versions;
+
+    /**
+     * @Type("ArrayCollection<Latamautos\NewVehiclesCatalogSearch\application\dto\MetaAttributeDTO>")
+     */
+    public $metaAttributeList;
 
     function __construct() {
     }
@@ -244,5 +268,103 @@ class ModelDetailDTO {
     public function setMedias($medias)
     {
         $this->medias = $medias;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getVersions() {
+        return $this->versions;
+    }
+
+    /**
+     * @param mixed $versions
+     */
+    public function setVersions($versions) {
+        $this->versions = $versions;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPhoto() {
+        return $this->photo;
+    }
+
+    /**
+     * @param mixed $photo
+     */
+    public function setPhoto($photo) {
+        $this->photo = $photo;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getBrand() {
+        return $this->brand;
+    }
+
+    /**
+     * @param mixed $brand
+     */
+    public function setBrand($brand) {
+        $this->brand = $brand;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getModel() {
+        return $this->model;
+    }
+
+    /**
+     * @param mixed $model
+     */
+    public function setModel($model) {
+        $this->model = $model;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCountVersion() {
+        return $this->countVersion;
+    }
+
+    /**
+     * @param mixed $countVersion
+     */
+    public function setCountVersion($countVersion) {
+        $this->countVersion = $countVersion;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPrice() {
+        return $this->price;
+    }
+
+    /**
+     * @param mixed $price
+     */
+    public function setPrice($price) {
+        $this->price = $price;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getMetaAttributeList() {
+        return $this->metaAttributeList;
+    }
+
+    /**
+     * @param mixed $metaAttributeList
+     */
+    public function setMetaAttributeList($metaAttributeList) {
+        $this->metaAttributeList = $metaAttributeList;
     }
 }
