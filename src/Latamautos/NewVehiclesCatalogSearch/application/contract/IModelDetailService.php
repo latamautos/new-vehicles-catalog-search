@@ -13,4 +13,6 @@ use Latamautos\MicroserviceGateway\core\IResource;
 
 interface IModelDetailService extends IResource {
 
+	public function addOrUpdateImage($idType, $idBrand, $idModel, $image);
+
 }

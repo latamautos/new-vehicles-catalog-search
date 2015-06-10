@@ -21,6 +21,11 @@ class MetaAttributeDTO {
 	 */
 	public $attributes;
 
+	/**
+	 * @Type("boolean")
+	 */
+	public $showCollapsed;
+
 	function __construct() {
 	}
 
@@ -50,5 +55,19 @@ class MetaAttributeDTO {
 	 */
 	public function setAttributes($attributes) {
 		$this->attributes = $attributes;
+	}
+
+	/**
+	 * @return mixed
+	 */
+	public function getShowCollapsed() {
+		return $this->showCollapsed;
+	}
+
+	/**
+	 * @param mixed $showCollapsed
+	 */
+	public function setShowCollapsed($showCollapsed) {
+		$this->showCollapsed = $showCollapsed;
 	}
 }
