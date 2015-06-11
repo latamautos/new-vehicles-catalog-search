@@ -367,4 +367,12 @@ class ModelDetailDTO {
     public function setMetaAttributeList($metaAttributeList) {
         $this->metaAttributeList = $metaAttributeList;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getType()
+    {
+        return $this->type;
+    }
 }
