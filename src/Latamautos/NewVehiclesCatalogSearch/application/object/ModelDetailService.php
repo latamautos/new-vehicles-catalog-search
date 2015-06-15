@@ -18,6 +18,7 @@ use grupocentrico\basecode\helpers\Thumbnail;
 
 class ModelDetailService extends BaseNewVehicleCatalogService implements IModelDetailService {
 
+	const IMAGE_BASE_FOLDER = "catalogNews/";
 	private $imageHandler;
 
 	function __construct(IImageHandler $imageHandler) {
@@ -27,10 +28,25 @@ class ModelDetailService extends BaseNewVehicleCatalogService implements IModelD
 		$this->imageHandler = $imageHandler;
 	}
 
-	public function addOrUpdateImage($idType, $idBrand, $idModel, $image) {
-		$url = $idType . '/' . $idBrand . '/' . $idModel;
-		$image = $this->imageHandler->createCatalogNewsImage($url, $image);
-		return $this->buildPathOfPhoto($image->getResourceId(), $image->getName(),$image->getBucketHash());
+	public function addOrUpdateImage($idModel, $image) {
+		$image = $this->imageHandler->createCatalogNewsImage($idModel, $image);
+		$imgUrls = new \stdClass();
+		$imgUrls->amazon= $this->buildAmazonPathOfImage($image->getResourceId(), $image->getName());
+		$imgUrls->nginx = $this->buildNginxPathOfImage($image->getResourceId(), $image->getName(),$image->getBucketHash());
+		return $imgUrls;
+	}
+
+	/**
+	 * @param $resourceId
+	 * @param $namePhoto
+	 * @return string
+	 */
+	private function buildAmazonPathOfImage($resourceId, $namePhoto) {
+		if ($namePhoto == null) {
+			return null;
+		}
+		$imageComplete = $this::IMAGE_BASE_FOLDER . $resourceId . "/" . $namePhoto;
+		return Thumbnail::getGenericImage($imageComplete);
 	}
 
 	/**
@@ -38,13 +54,12 @@ class ModelDetailService extends BaseNewVehicleCatalogService implements IModelD
 	 * @param $namePhoto
 	 * @param $imageBucketHash
 	 * @return string
-	 * @internal param $image
 	 */
-	private function buildPathOfPhoto($resourceId, $namePhoto, $imageBucketHash) {
+	private function buildNginxPathOfImage($resourceId, $namePhoto, $imageBucketHash) {
 		if ($namePhoto == null) {
 			return null;
 		}
-		$imageComplete = "catalogNews/" . $resourceId . "/" . $namePhoto;
-		return Thumbnail::getFromBucket($imageComplete, $imageBucketHash,$args = '300x198');
+		$imageComplete = $this::IMAGE_BASE_FOLDER . $resourceId . "/" . $namePhoto;
+		return Thumbnail::getFromBucket($imageComplete, $imageBucketHash,$args = '[SIZE_PLACEHOLDER]');
 	}
 }
