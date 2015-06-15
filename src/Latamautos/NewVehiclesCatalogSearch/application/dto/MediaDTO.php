@@ -22,10 +22,16 @@ class MediaDTO {
      */
     public $url;
 
-	function __construct($mediaType, $tagType, $url) {
+	/**
+	 * @Type("string")
+	 */
+	public $treatedUrl;
+
+	function __construct($mediaType, $tagType, $url,$treatedUrl) {
 		$this->mediaType = $mediaType;
 		$this->tagType = $tagType;
 		$this->url = $url;
+		$this->treatedUrl = $treatedUrl;
 	}
 
 	/**
@@ -47,5 +53,19 @@ class MediaDTO {
 	 */
 	public function getUrl() {
 		return $this->url;
+	}
+
+	/**
+	 * @return mixed
+	 */
+	public function getTreatedUrl() {
+		return $this->treatedUrl;
+	}
+
+	/**
+	 * @param mixed $treatedUrl
+	 */
+	public function setTreatedUrl($treatedUrl) {
+		$this->treatedUrl = $treatedUrl;
 	}
 }

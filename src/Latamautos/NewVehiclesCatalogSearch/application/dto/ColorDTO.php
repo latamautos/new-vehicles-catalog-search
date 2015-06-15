@@ -22,10 +22,16 @@ class ColorDTO {
      */
     public $urlImage;
 
-	function __construct($name, $value, $urlImage) {
+	/**
+	 * @Type("string")
+	 */
+	public $treatedUrl;
+
+	function __construct($name, $value, $urlImage,$treatedUrl) {
 		$this->name = $name;
 		$this->value = $value;
 		$this->urlImage = $urlImage;
+		$this->treatedUrl = $treatedUrl;
 	}
 
 	/**
@@ -47,5 +53,19 @@ class ColorDTO {
 	 */
 	public function getUrlImage() {
 		return $this->urlImage;
+	}
+
+	/**
+	 * @return mixed
+	 */
+	public function getTreatedUrl() {
+		return $this->treatedUrl;
+	}
+
+	/**
+	 * @param mixed $treatedUrl
+	 */
+	public function setTreatedUrl($treatedUrl) {
+		$this->treatedUrl = $treatedUrl;
 	}
 }
