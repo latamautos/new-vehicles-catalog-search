@@ -47,6 +47,12 @@ class ModelDetailSummaryDTO {
 	public $subtypes;
 
 	/**
+	 * @Type("integer")
+	 */
+	public $currencyId;
+
+
+	/**
 	 * @return mixed
 	 */
 	public function getBrand() {
@@ -156,5 +162,19 @@ class ModelDetailSummaryDTO {
 	 */
 	public function setSubtypes($subtypes) {
 		$this->subtypes = $subtypes;
+	}
+
+	/**
+	 * @return mixed
+	 */
+	public function getCurrencyId() {
+		return $this->currencyId;
+	}
+
+	/**
+	 * @param mixed $currencyId
+	 */
+	public function setCurrencyId($currencyId) {
+		$this->currencyId = $currencyId;
 	}
 }

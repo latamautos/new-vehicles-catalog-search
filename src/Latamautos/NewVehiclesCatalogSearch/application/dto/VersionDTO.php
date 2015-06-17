@@ -38,6 +38,10 @@ class VersionDTO {
 	 */
 	public $year;
 	/**
+	 * @Type("integer")
+	 */
+	public $currencyId;
+	/**
 	 * @Type("ArrayCollection<Latamautos\NewVehiclesCatalogSearch\application\dto\MetaAttributeDTO>")
 	 */
 	public $metaAttributes;
@@ -142,5 +146,19 @@ class VersionDTO {
 	 */
 	public function setModelId($modelId) {
 		$this->modelId = $modelId;
+	}
+
+	/**
+	 * @return mixed
+	 */
+	public function getCurrencyId() {
+		return $this->currencyId;
+	}
+
+	/**
+	 * @param mixed $currencyId
+	 */
+	public function setCurrencyId($currencyId) {
+		$this->currencyId = $currencyId;
 	}
 }

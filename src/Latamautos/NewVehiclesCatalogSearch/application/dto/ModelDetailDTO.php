@@ -107,6 +107,12 @@ class ModelDetailDTO {
      */
     public $metaAttributeList;
 
+    /**
+     * @Type("integer")
+     */
+    public $currencyId;
+
+
     function __construct() {
     }
 
@@ -374,5 +380,19 @@ class ModelDetailDTO {
     public function getType()
     {
         return $this->type;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCurrencyId() {
+        return $this->currencyId;
+    }
+
+    /**
+     * @param mixed $currencyId
+     */
+    public function setCurrencyId($currencyId) {
+        $this->currencyId = $currencyId;
     }
 }
