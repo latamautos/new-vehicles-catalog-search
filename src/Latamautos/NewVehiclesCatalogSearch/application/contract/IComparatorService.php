@@ -16,5 +16,5 @@ interface IComparatorService {
 
 	public function getProcessedURI($objectOrId = null);
 
-	public function index(array $queryString = array ());
+	public function store($body, array $queryString = array ());
 }
