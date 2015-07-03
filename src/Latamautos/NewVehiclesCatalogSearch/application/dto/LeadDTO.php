@@ -28,6 +28,10 @@ class LeadDTO {
      */
     public $locationCode;
 
+    /**
+     * @Type("string")
+     */
+    public $message;
 
     /**
      * @Type("ArrayCollection<integer>")
@@ -100,5 +104,23 @@ class LeadDTO {
     {
         $this->locationCode = $locationCode;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getMessage()
+    {
+        return $this->message;
+    }
+
+    /**
+     * @param mixed $message
+     */
+    public function setMessage($message)
+    {
+        $this->message = $message;
+    }
+
+
 
 }
