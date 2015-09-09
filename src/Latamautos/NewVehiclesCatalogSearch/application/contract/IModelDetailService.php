@@ -15,4 +15,6 @@ interface IModelDetailService extends IResource {
 
 	public function addOrUpdateImage($idModel, $image);
 
+	function addOrUpdateImageFromURL($idModel, $url);
+
 }

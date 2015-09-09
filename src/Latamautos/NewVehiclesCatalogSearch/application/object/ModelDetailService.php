@@ -9,7 +9,6 @@
 namespace Latamautos\NewVehiclesCatalogSearch\application\object;
 
 
-
 use Latamautos\NewVehiclesCatalogSearch\application\contract\IModelDetailService;
 use Latamautos\NewVehiclesCatalogSearch\application\dto\ModelDetailDTO;
 use latam\core\domain\contract\IImageHandler;
@@ -30,10 +29,7 @@ class ModelDetailService extends BaseNewVehicleCatalogService implements IModelD
 
 	public function addOrUpdateImage($idModel, $image) {
 		$image = $this->imageHandler->createCatalogNewsImage($idModel, $image);
-		$imgUrls = new \stdClass();
-		$imgUrls->amazon= $this->buildAmazonPathOfImage($image->getResourceId(), $image->getName());
-		$imgUrls->nginx = $this->buildNginxPathOfImage($image->getResourceId(), $image->getName(),$image->getBucketHash());
-		return $imgUrls;
+		return $this->createPathFormImage($image);
 	}
 
 	/**
@@ -60,6 +56,23 @@ class ModelDetailService extends BaseNewVehicleCatalogService implements IModelD
 			return null;
 		}
 		$imageComplete = $this::IMAGE_BASE_FOLDER . $resourceId . "/" . $namePhoto;
-		return Thumbnail::getFromBucket($imageComplete, $imageBucketHash,$args = '[SIZE_PLACEHOLDER]');
+		return Thumbnail::getFromBucket($imageComplete, $imageBucketHash, $args = '[SIZE_PLACEHOLDER]');
+	}
+
+	function addOrUpdateImageFromURL($idModel, $url) {
+		$image = $this->imageHandler->uploadNewsCatalogPhotoUrlToS3($idModel, $url);
+		$imgUrls= $this->createPathFormImage($image);
+		return ["amazon"=>$imgUrls->amazon,"nginx"=>$imgUrls->nginx];
+	}
+
+	/**
+	 * @param $image
+	 * @return \stdClass
+	 */
+	private function createPathFormImage($image) {
+		$imgUrls = new \stdClass();
+		$imgUrls->amazon = $this->buildAmazonPathOfImage($image->getResourceId(), $image->getName());
+		$imgUrls->nginx = $this->buildNginxPathOfImage($image->getResourceId(), $image->getName(), $image->getBucketHash());
+		return $imgUrls;
 	}
 }
