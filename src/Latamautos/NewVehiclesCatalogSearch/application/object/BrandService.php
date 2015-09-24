@@ -39,6 +39,6 @@ class BrandService extends BaseNewVehicleCatalogService implements IBrandService
 			return null;
 		}
 		$imageComplete = "catalogNews/" . $resourceId . "/" . $namePhoto;
-		return Thumbnail::getFromBucket($imageComplete, $imageBucketHash,$args = '300x198');
+        return Thumbnail::getGenericImage($imageComplete, $imageBucketHash,$args = '300x198');
 	}
 }

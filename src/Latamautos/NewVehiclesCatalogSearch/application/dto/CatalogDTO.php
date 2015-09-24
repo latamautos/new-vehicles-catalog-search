@@ -48,6 +48,10 @@ class CatalogDTO {
 	 * @Type("integer")
 	 */
     public $catalogParentId;
+    /**
+     * @Type("boolean")
+     */
+    public $featured;
 
 	function __construct() {
 	}
@@ -179,4 +183,20 @@ class CatalogDTO {
 	public function setImage($image) {
 		$this->image = $image;
 	}
+
+    /**
+     * @return mixed
+     */
+    public function getFeatured()
+    {
+        return $this->featured;
+    }
+
+    /**
+     * @param mixed $featured
+     */
+    public function setFeatured($featured)
+    {
+        $this->featured = $featured;
+    }
 }
