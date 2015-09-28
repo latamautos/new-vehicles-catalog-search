@@ -41,6 +41,11 @@ class DealerDTO {
      */
     public $status;
 
+    /**
+     * @Type("string")
+     */
+    public $referenceId;
+
 	function __construct() {
 	}
 
@@ -155,4 +160,21 @@ class DealerDTO {
     {
         $this->status = $status;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getReferenceId()
+    {
+        return $this->referenceId;
+    }
+
+    /**
+     * @param mixed $referenceId
+     */
+    public function setReferenceId($referenceId)
+    {
+        $this->referenceId = $referenceId;
+    }
+
 }
