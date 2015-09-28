@@ -13,4 +13,6 @@ use Latamautos\MicroserviceGateway\core\IResource;
 
 interface IDealerService extends IResource {
 
+	function getDealerByReferenceId($referenceId);
+
 }

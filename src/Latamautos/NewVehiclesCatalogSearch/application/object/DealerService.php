@@ -19,4 +19,11 @@ class DealerService extends BaseAdminService implements IDealerService {
 		$this->setDto(new DealerDTO());
 		$this->setUri("admin-java/v1/dealers");
 	}
+
+    function getDealerByReferenceId($referenceId)
+    {
+        $this->setUri("admin-java/v1/dealers/by-reference-id/".$referenceId);
+        return $this->index();
+    }
+
 }
