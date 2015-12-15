@@ -20,6 +20,10 @@ class CustomerDTO {
 	 * @Type("string")
 	 */
     public $name;
+    /**
+     * @Type("string")
+     */
+    public $identificationNumber;
 	/**
 	 * @Type("string")
 	 */
@@ -91,5 +95,19 @@ class CustomerDTO {
     public function setTelephone($telephone)
     {
         $this->telephone = $telephone;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getIdentificationNumber() {
+        return $this->identificationNumber;
+    }
+
+    /**
+     * @param mixed $identificationNumber
+     */
+    public function setIdentificationNumber($identificationNumber) {
+        $this->identificationNumber = $identificationNumber;
     }
 }
